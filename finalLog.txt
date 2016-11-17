@@ -1,0 +1,258 @@
+(?<host>\w*) (?<clock>.*)\n(?<event>.*)
+server1 {"server1":1}
+Initialization-Complete
+server1 {"server1":2}
+Start-GoVec-Port
+server1 {"server1":3, "client":3}
+Received-Message-From-Client
+server1 {"server1":4, "client":4}
+Received-Message-From-Client
+server1 {"server1":5, "client":5}
+Received-Message-From-Client
+server1 {"server1":6, "client":6}
+Received-Message-From-Client
+server1 {"server1":7, "client":6}
+dialing-a-server
+server1 {"server1":8, "client":6}
+connecting-the-next-server
+server1 {"server1":9, "client":8, "server2":5}
+Received-Message-From-Client
+server1 {"server1":10, "client":9, "server2":5}
+Received-Message-From-Client
+server1 {"server1":11, "client":9, "server2":5}
+dialing-a-server
+server1 {"server1":12, "client":9, "server2":5}
+connecting-the-next-server
+server1 {"server1":13, "client":11, "server2":8}
+Received-Message-From-Client
+server1 {"server1":14, "client":12, "server2":8}
+Received-Message-From-Client
+server1 {"server1":15, "client":12, "server2":8}
+dialing-a-server
+server1 {"server1":16, "client":12, "server2":8}
+connecting-the-next-server
+server1 {"server1":17, "client":14, "server2":11}
+Received-Message-From-Client
+server1 {"server1":18, "client":15, "server2":11}
+Received-Message-From-Client
+server1 {"server1":19, "client":15, "server2":11}
+dialing-a-server
+server1 {"server1":20, "client":15, "server2":11}
+connecting-the-next-server
+server1 {"server1":21, "client":17, "server2":14}
+Received-Message-From-Client
+server1 {"server1":22, "client":18, "server2":14}
+Received-Message-From-Client
+server1 {"server1":23, "client":18, "server2":14}
+dialing-a-server
+server1 {"server1":24, "client":18, "server2":14}
+connecting-the-next-server
+server1 {"server1":25, "client":20, "server2":17}
+Received-Message-From-Client
+server1 {"server1":26, "client":21, "server2":17}
+Received-Message-From-Client
+server1 {"server1":27, "client":21, "server2":17}
+dialing-a-server
+server1 {"server1":28, "client":21, "server2":17}
+connecting-the-next-server
+server1 {"server1":29, "client":23, "server2":20}
+Received-Message-From-Client
+server1 {"server1":30, "client":24, "server2":20}
+Received-Message-From-Client
+server1 {"server1":31, "client":24, "server2":20}
+dialing-a-server
+server1 {"server1":32, "client":24, "server2":20}
+connecting-the-next-server
+server1 {"server1":33, "client":26, "server2":23}
+Received-Message-From-Client
+server1 {"server1":34, "client":27, "server2":23}
+Received-Message-From-Client
+server1 {"server1":35, "client":27, "server2":23}
+dialing-a-server
+server1 {"server1":36, "client":27, "server2":23}
+connecting-the-next-server
+server1 {"server1":37, "client":29, "server2":26}
+Received-Message-From-Client
+server1 {"server1":38, "client":30, "server2":26}
+Received-Message-From-Client
+server1 {"server1":39, "client":30, "server2":26}
+dialing-a-server
+server1 {"server1":40, "client":30, "server2":26}
+connecting-the-next-server
+server1 {"server1":41, "client":32, "server2":29}
+Received-Message-From-Client
+server1 {"server1":42, "client":33, "server2":29}
+Received-Message-From-Client
+server1 {"server1":43, "client":33, "server2":29}
+dialing-a-server
+server1 {"server1":44, "client":33, "server2":29}
+connecting-the-next-server
+server1 {"server1":45, "client":35, "server2":32}
+Received-Message-From-Client
+server1 {"server1":46, "client":36, "server2":32}
+Received-Message-From-Client
+server1 {"server1":47, "client":36, "server2":32}
+dialing-a-server
+server1 {"server1":48, "client":36, "server2":32}
+connecting-the-next-server
+server1 {"server1":49, "client":38, "server2":35}
+Received-Message-From-Client
+server1 {"server1":50, "client":39, "server2":35}
+Received-Message-From-Client
+server1 {"server1":51, "client":39, "server2":35}
+dialing-a-server
+server1 {"server1":52, "client":39, "server2":35}
+connecting-the-next-server
+server2 {"server2":1}
+Initialization-Complete
+server2 {"server2":2}
+Start-GoVec-Port
+server2 {"server2":3, "server1":7, "client":6}
+Received-Message-From-Client
+server2 {"server2":4, "server1":8, "client":6}
+Received-Message-From-Client
+server2 {"server2":5, "server1":8, "client":6}
+return-to-original-caller
+server2 {"server2":6, "server1":11, "client":9}
+Received-Message-From-Client
+server2 {"server2":7, "server1":12, "client":9}
+Received-Message-From-Client
+server2 {"server2":8, "server1":12, "client":9}
+return-to-original-caller
+server2 {"server2":9, "server1":15, "client":12}
+Received-Message-From-Client
+server2 {"server2":10, "server1":16, "client":12}
+Received-Message-From-Client
+server2 {"server2":11, "server1":16, "client":12}
+return-to-original-caller
+server2 {"server2":12, "server1":19, "client":15}
+Received-Message-From-Client
+server2 {"server2":13, "server1":20, "client":15}
+Received-Message-From-Client
+server2 {"server2":14, "server1":20, "client":15}
+return-to-original-caller
+server2 {"server2":15, "server1":23, "client":18}
+Received-Message-From-Client
+server2 {"server2":16, "server1":24, "client":18}
+Received-Message-From-Client
+server2 {"server2":17, "server1":24, "client":18}
+return-to-original-caller
+server2 {"server2":18, "server1":27, "client":21}
+Received-Message-From-Client
+server2 {"server2":19, "server1":28, "client":21}
+Received-Message-From-Client
+server2 {"server2":20, "server1":28, "client":21}
+return-to-original-caller
+server2 {"server2":21, "server1":31, "client":24}
+Received-Message-From-Client
+server2 {"server2":22, "server1":32, "client":24}
+Received-Message-From-Client
+server2 {"server2":23, "server1":32, "client":24}
+return-to-original-caller
+server2 {"server2":24, "server1":35, "client":27}
+Received-Message-From-Client
+server2 {"server2":25, "server1":36, "client":27}
+Received-Message-From-Client
+server2 {"server2":26, "server1":36, "client":27}
+return-to-original-caller
+server2 {"server2":27, "server1":39, "client":30}
+Received-Message-From-Client
+server2 {"server2":28, "server1":40, "client":30}
+Received-Message-From-Client
+server2 {"server2":29, "server1":40, "client":30}
+return-to-original-caller
+server2 {"server2":30, "server1":43, "client":33}
+Received-Message-From-Client
+server2 {"server2":31, "server1":44, "client":33}
+Received-Message-From-Client
+server2 {"server2":32, "server1":44, "client":33}
+return-to-original-caller
+server2 {"server2":33, "server1":47, "client":36}
+Received-Message-From-Client
+server2 {"server2":34, "server1":48, "client":36}
+Received-Message-From-Client
+server2 {"server2":35, "server1":48, "client":36}
+return-to-original-caller
+server2 {"server2":36, "server1":51, "client":39}
+Received-Message-From-Client
+server2 {"server2":37, "server1":52, "client":39}
+Received-Message-From-Client
+client {"client":1}
+Initialization-Complete
+client {"client":2}
+Start-GoVec-Port
+client {"client" :3}
+dialing-a-server
+client {"client":4}
+calling-a-server-service
+client {"client":5}
+dialing-a-server
+client {"client":6}
+calling-a-server-service
+client {"client":7, "server2":5, "server1":8}
+Received-Message-From-Client
+client {"client":8, "server2":5, "server1":8}
+dialing-a-server
+client {"client":9, "server2":5, "server1":8}
+calling-a-server-service
+client {"client":10, "server2":8, "server1":12}
+Received-Message-From-Client
+client {"client":11, "server2":8, "server1":12}
+dialing-a-server
+client {"client":12, "server2":8, "server1":12}
+calling-a-server-service
+client {"client":13, "server2":11, "server1":16}
+Received-Message-From-Client
+client {"client":14, "server2":11, "server1":16}
+dialing-a-server
+client {"client":15, "server2":11, "server1":16}
+calling-a-server-service
+client {"client":16, "server2":14, "server1":20}
+Received-Message-From-Client
+client {"client":17, "server2":14, "server1":20}
+dialing-a-server
+client {"client":18, "server2":14, "server1":20}
+calling-a-server-service
+client {"client":19, "server2":17, "server1":24}
+Received-Message-From-Client
+client {"client":20, "server2":17, "server1":24}
+dialing-a-server
+client {"client":21, "server2":17, "server1":24}
+calling-a-server-service
+client {"client":22, "server2":20, "server1":28}
+Received-Message-From-Client
+client {"client":23, "server2":20, "server1":28}
+dialing-a-server
+client {"client":24, "server2":20, "server1":28}
+calling-a-server-service
+client {"client":25, "server2":23, "server1":32}
+Received-Message-From-Client
+client {"client":26, "server2":23, "server1":32}
+dialing-a-server
+client {"client":27, "server2":23, "server1":32}
+calling-a-server-service
+client {"client":28, "server2":26, "server1":36}
+Received-Message-From-Client
+client {"client":29, "server2":26, "server1":36}
+dialing-a-server
+client {"client":30, "server2":26, "server1":36}
+calling-a-server-service
+client {"client":31, "server2":29, "server1":40}
+Received-Message-From-Client
+client {"client":32, "server2":29, "server1":40}
+dialing-a-server
+client {"client":33, "server2":29, "server1":40}
+calling-a-server-service
+client {"client":34, "server2":32, "server1":44}
+Received-Message-From-Client
+client {"client":35, "server2":32, "server1":44}
+dialing-a-server
+client {"client":36, "server2":32, "server1":44}
+calling-a-server-service
+client {"client":37, "server2":35, "server1":48}
+Received-Message-From-Client
+client {"client":38, "server2":35, "server1":48}
+dialing-a-server
+client {"client":39, "server2":35, "server1":48}
+calling-a-server-service
+

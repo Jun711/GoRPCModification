@@ -1,0 +1,72 @@
+client {"client":1}
+Initialization Complete
+client {"client":2}
+Start-GoVec-Port
+client {"client":3}
+calling-a-server-service
+client {"client":4}
+calling-a-server-service
+client {"client":5}
+calling-a-server-service
+client {"client":6}
+calling-a-server-service
+client {"client":7}
+calling-a-server-service
+client {"client":8}
+calling-a-server-service
+client {"client":9}
+calling-a-server-service
+client {"client":10}
+calling-a-server-service
+client {"client":11}
+calling-a-server-service
+client {"client":12}
+calling-a-server-service
+client {"client":13}
+calling-a-server-service
+client {"client":14}
+calling-a-server-service
+client {"client":15, "LastServerBeforeReturn":13, "server1":52}
+Received-Message-From-Client
+client {"client":16, "LastServerBeforeReturn":14, "server1":52}
+Received-Message-From-Client
+client {"client":17, "LastServerBeforeReturn":14, "server1":52}
+calling-a-server-service
+client {"client":18, "LastServerBeforeReturn":20, "server1":57}
+Received-Message-From-Client
+client {"client":19, "LastServerBeforeReturn":20, "server1":57}
+calling-a-server-service
+client {"client":20, "LastServerBeforeReturn":26, "server1":62}
+Received-Message-From-Client
+client {"client":21, "LastServerBeforeReturn":26, "server1":62}
+calling-a-server-service
+client {"client":22, "LastServerBeforeReturn":32, "server1":67}
+Received-Message-From-Client
+client {"client":23, "LastServerBeforeReturn":32, "server1":67}
+calling-a-server-service
+client {"client":24, "LastServerBeforeReturn":38, "server1":72}
+Received-Message-From-Client
+client {"client":25, "LastServerBeforeReturn":38, "server1":72}
+calling-a-server-service
+client {"client":26, "LastServerBeforeReturn":44, "server1":77}
+Received-Message-From-Client
+client {"client":27, "LastServerBeforeReturn":44, "server1":77}
+calling-a-server-service
+client {"client":28, "LastServerBeforeReturn":50, "server1":82}
+Received-Message-From-Client
+client {"client":29, "LastServerBeforeReturn":50, "server1":82}
+calling-a-server-service
+client {"client":30, "LastServerBeforeReturn":56, "server1":87}
+Received-Message-From-Client
+client {"client":31, "LastServerBeforeReturn":56, "server1":87}
+calling-a-server-service
+client {"client":32, "LastServerBeforeReturn":62, "server1":92}
+Received-Message-From-Client
+client {"client":33, "LastServerBeforeReturn":62, "server1":92}
+calling-a-server-service
+client {"client":34, "LastServerBeforeReturn":68, "server1":97}
+Received-Message-From-Client
+client {"client":35, "LastServerBeforeReturn":68, "server1":97}
+calling-a-server-service
+client {"client":36, "LastServerBeforeReturn":68, "server1":97}
+calling-a-server-service

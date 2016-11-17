@@ -1,0 +1,4 @@
+server1 {"server1":1}
+Initialization Complete
+server1 {"server1":2}
+Start-GoVec-Port

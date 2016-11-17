@@ -1,0 +1,4 @@
+server {"server":1}
+Initialization Complete
+server {"server":2}
+Registration success

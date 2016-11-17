@@ -1,0 +1,189 @@
+diff --git a/logfile-Log.txt b/logfile-Log.txt
+index 6bbae01..c832546 100644
+--- a/logfile-Log.txt
++++ b/logfile-Log.txt
+@@ -81,101 +81,3 @@ Dialing success
+ client {"client":2}
+ Dialing success
+  
+- 
+-=== Execution #21  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #22  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #23  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #24  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #25  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #26  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #27  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #28  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #29  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #30  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #31  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #32  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #33  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #34  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #35  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #36  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #37  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #38  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #39  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #40  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #41  ===
+- 
+-=== Execution #42  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #43  ===
+-server {"server":2}
+-Registration success
+- 
+-=== Execution #44  ===
+-client {"client":2}
+-Dialing success
+- 
+-=== Execution #45  ===
+-client {"client":2}
+-Dialing success
+diff --git a/rpcc/client.go b/rpcc/client.go
+index 75ee282..19d7154 100644
+--- a/rpcc/client.go
++++ b/rpcc/client.go
+@@ -365,13 +365,7 @@ func (client *Client) Call(serviceMethod string, args interface{}, reply interfa
+ 	// 	fmt.Println(client.Go(serviceMethod, args, reply, make(chan *Call, 1)).Done)
+ 	// }()
+ 	// return call.Error
+-}
+ 
+-func (client *Client) InitialCall(serviceMethod string, args interface{}, reply interface{}, cfInfo ChainingFunctionInfo) {
+-	client.Go(serviceMethod, args, reply, make(chan *Call, 1), cfInfo)
+-	if (cfInfo.DebuggingPort != "") {
+-		client.StartDebugPort(cfInfo.DebuggingPort)
+-	}
+ }
+ 
+ func (client *Client) DebugCall(conn io.ReadWriteCloser) {
+@@ -387,6 +381,8 @@ func (client *Client) DebugCall(conn io.ReadWriteCloser) {
+ 		return
+ 	}
+ 
++	//fmt.Println("SUCCESSFUL UNMARSHAL")
++
+ 	var args GetArgs
+ 	MapToStruct(returnVal.FunArgs, &args)
+ 	//fmt.Println("DEBUG: ABOUT TO CALL IP: ", returnVal.Ip)
+@@ -408,16 +404,3 @@ func (client *Client) DebugCall(conn io.ReadWriteCloser) {
+ 	serv.Call(returnVal.ServiceFunName, args, &reply, returnVal.CFInfo)
+ }
+ 
+-func (client *Client) StartDebugPort(debugIp string) {
+-	l, e := net.Listen("tcp", debugIp)
+-	if e != nil {
+-		fmt.Println("listen error on debug port: ", e)
+-	}
+-	fmt.Println("LISTENING IN DEBUG MODE AT PORT 5000")
+-	for {
+-		conn, _ := l.Accept()
+-
+-		fmt.Println("ACCEPT DEBUG")
+-		client.DebugCall(conn)
+-	}
+-}
+diff --git a/sampleClient.go b/sampleClient.go
+index 7897365..0442e0f 100644
+--- a/sampleClient.go
++++ b/sampleClient.go
+@@ -2,8 +2,8 @@ package main
+ 
+ import (
+ 	"./rpcc"
+-	//"fmt"
+-	//"net"
++	"fmt"
++	"net"
+ )
+ 
+ type ValReply struct {
+@@ -31,8 +31,21 @@ func main() {
+ 
+ 	args.Key = "hello"
+ 	serv, _ := rpc.Dial("tcp", "localhost:4000")
+-	serv.InitialCall("SampleServ.Reverse", args, &reply, cfInfo)
+-
++	serv.Call("SampleServ.Reverse", args, &reply, cfInfo)
++
++	if (debuggingMode){
++		l, e := net.Listen("tcp", cfInfo.DebuggingPort)
++		if e != nil {
++			fmt.Println("listen error on debug port: ", e)
++		}
++		fmt.Println("LISTENING IN DEBUG MODE AT PORT 5000")
++		for {
++			conn, _ := l.Accept()
++
++			fmt.Println("ACCEPT DEBUG")
++			serv.DebugCall(conn)
++		}
++	}
+ 	/*
+ 	  serv.Call(ServiceFunction1)
+ 	  An INtermediate layer that then calls ServiceFunction1
